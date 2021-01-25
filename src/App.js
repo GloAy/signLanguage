@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import * as tf from '@tensorflow/tfjs';
-import './App.css';
-import Visual from './visual';
+import React, { Component } from "react";
+import * as tf from "@tensorflow/tfjs";
+import "./App.css";
+import Visual from "./visual";
 
 class App extends React.Component {
   constructor(props) {
@@ -13,25 +13,30 @@ class App extends React.Component {
   }
 
   activateCamera() {
-    this.setState(state => ({
+    this.setState((state) => ({
       showCamera: !state.showCamera, //
     }));
   }
 
   render() {
     return (
-      <div>
+      <div className="App">
         <div>
-          <h1>Sign Language Interpreter</h1>
+          <h1>Emoji</h1>
         </div>
         <div className="buttonForCamera">
-          <button className="button" onClick={this.activateCamera}>
+          <button
+            className="button"
+            onClick={this.activateCamera}
+            variant="contained"
+            color="secondary"
+          >
             Click for Camera
           </button>
           {!this.state.showCamera ? (
-            ''
+            ""
           ) : (
-            <div className="App">
+            <div>
               <header className="App-header">
                 <Visual />
               </header>
