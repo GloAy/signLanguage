@@ -45,8 +45,8 @@ export default function Visual() {
           rockGesture,
         ]);
 
-        console.log("this is the rock", rockGesture);
-        console.log("this is the victory one", fp.Gestures.VictoryGesture);
+        //console.log("this is the rock", rockGesture);
+        //console.log("this is the victory one", fp.Gestures.VictoryGesture);
 
         //estimate our gestures
         //passing in minimum confidence detector
@@ -88,6 +88,11 @@ export default function Visual() {
       {emoji && emoji === "victory" && (
         <div>
           <img src="/victory.png" height="120" width="100" />
+        </div>
+      )}
+      {emoji && emoji === "rockGesture" && (
+        <div>
+          <img src="/rock.png" height="120" width="100" />
         </div>
       )}
       <Webcam

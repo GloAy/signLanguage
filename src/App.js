@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import * as tf from "@tensorflow/tfjs";
 import "./App.css";
 import Visual from "./visual";
+import Button from "@material-ui/core/Button";
+import EmojiPeopleIcon from "@material-ui/icons/EmojiPeople";
 
 class App extends React.Component {
   constructor(props) {
@@ -22,17 +24,21 @@ class App extends React.Component {
     return (
       <div className="App">
         <div>
-          <h1>Emoji</h1>
+          <h1>Show Me The EMOJI </h1>
         </div>
         <div className="buttonForCamera">
-          <button
+          <Button
             className="button"
             onClick={this.activateCamera}
             variant="contained"
             color="secondary"
+            size="large"
+            style={{ fontSize: 14, fontFamily: "Helvetica Neue" }}
+            startIcon={<EmojiPeopleIcon />}
           >
-            Click for Camera
-          </button>
+            {" "}
+            YOLO
+          </Button>
           {!this.state.showCamera ? (
             ""
           ) : (
