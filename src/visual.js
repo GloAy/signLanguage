@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import Webcam from "react-webcam";
-import * as handpose from "@tensorflow-models/handpose";
+
 // import thumbsup from "./thumbsup.png";
 // import victory from "./victory.png";
 import * as fp from "fingerpose";
@@ -93,6 +93,16 @@ export default function Visual() {
       {emoji && emoji === "rockGesture" && (
         <div>
           <img src="/rock.png" height="120" width="100" />
+        </div>
+      )}
+      {emoji && emoji === "fingerCrossGesture" && (
+        <div>
+          <img src="/fingercross.png" height="120" width="100" />
+        </div>
+      )}
+      {emoji && emoji === "loveyouGesture" && (
+        <div>
+          <img src="/loveyouemoji.png" height="120" width="100" />
         </div>
       )}
       <Webcam

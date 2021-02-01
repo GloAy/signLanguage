@@ -7,15 +7,26 @@ import {
 
 export const rockGesture = new GestureDescription("rockGesture");
 
-//thumb
-rockGesture.addCurl(Finger.Thumb, FingerCurl.FullCurl, 0.75);
-//rockGesture.addDirection(Finger.Thumb, FingerDirection.HorizontalLeft, 1.0);
-//rockGesture.addDirection(Finger.Thumb, FingerDirection.HorizontalRight, 1.0);
-rockGesture.addDirection(Finger.Thumb, FingerDirection.DiagonalUpLeft, 1.0);
-rockGesture.addDirection(Finger.Thumb, FingerDirection.DiagonalUpRight, 1.0);
+//Thumb
+rockGesture.addCurl(Finger.Thumb, FingerCurl.HalfCurl, 1.0);
+rockGesture.addDirection(Finger.Index, FingerDirection.VerticalUp, 0.8);
 
-for (let finger of [Finger.Index, Finger.Middle, Finger.Ring, Finger.Pinky]) {
-  rockGesture.addCurl(finger, FingerCurl.FullCurl, 0.75);
-  rockGesture.addDirection(finger, FingerDirection.VerticalDown, 0.25);
-  rockGesture.addDirection(finger, FingerDirection.VerticalDown, 1.0);
-}
+//Index
+rockGesture.addCurl(Finger.Index, FingerCurl.FullCurl, 1);
+rockGesture.addDirection(Finger.Index, FingerDirection.DiagonalUpRight, 0.8);
+rockGesture.addDirection(Finger.Index, FingerDirection.DiagonalUpLeft, 0.8);
+
+//Middle
+rockGesture.addCurl(Finger.Middle, FingerCurl.FullCurl, 1);
+rockGesture.addDirection(Finger.Middle, FingerDirection.VerticalRight, 0.8);
+rockGesture.addDirection(Finger.Middle, FingerDirection.VerticalLeft, 0.8);
+
+//Ring
+rockGesture.addCurl(Finger.Ring, FingerCurl.FullCurl, 1);
+rockGesture.addDirection(Finger.Ring, FingerDirection.VerticalRight, 0.8);
+rockGesture.addDirection(Finger.Ring, FingerDirection.VerticalLeft, 0.8);
+
+//Pinky
+rockGesture.addCurl(Finger.Pinky, FingerCurl.FullCurl, 1);
+rockGesture.addDirection(Finger.Pinky, FingerDirection.VerticalRight, 0.8);
+rockGesture.addDirection(Finger.Pinky, FingerDirection.VerticalLeft, 0.8);
